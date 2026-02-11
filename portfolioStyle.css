@@ -25,7 +25,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
+    position: relative;
     top: 0;
     z-index: 1000;
     width: 100%;
@@ -124,9 +124,11 @@ footer {
     }
 
     section {
+       
         margin: 10px;
         padding: 20px;
     }
+    
 
     .profile-pic {
         width: 100px;
@@ -157,20 +159,40 @@ ul {
 }
 
 /* horizontal scroll */
-.horizon-scroll > main {
+.horizon-scroll {
     display: flex;
     overflow-x: auto;
-    overflow-y:hidden;
+    overflow-y:auto;
    width: 100vw;
    height: 100vh;
-   transition: transform 0.6s ease-in-out;
+   
 }
 
 #hero .hero-content {
    
     align-items: center;
     gap: 350px;
-    text-align: right;
+    text-align: left;
+}
+
+#hero{
+   flex:0 0 auto;
+   display: flex;
+   
+   min-width: 100vw;
+
+}
+.hero-content{
+   display:flex;
+   flex-direction:row;
+   gap:2rem;
+}
+#hero-pic-content{
+   flex: 0 0 auto;
+}
+.hero-image{
+   max-width:300px;
+   height:auto;
 }
 
 
