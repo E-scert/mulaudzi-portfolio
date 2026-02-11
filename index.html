@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="UTF-8">
+        <title>JR's PortFolio</title>
+        <link rel="stylesheet" href="portfolioStyle.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+
+    </head>
+    <body>
+        <header>
+
+            <div class="header-content">
+                <div class="profile-name">
+             <!-- /*<img src="Snapchat-1773887508.jpg" alt="Uhone's Profile Picture" class="profile-pic">*/ -->
+            <h1>Jr' PortFolio</h1>
+                </div>
+             
+            </div>
+            
+            
+            <nav>
+                <a href="#hero" id="link-hero" onclick="scrollTosection('hero')">Welcome</a>
+                <a href="#about" id="link-about"  onclick="scrollTosection('about')">About</a>
+                <a href="#skills" id="link-skills"  onclick="scrollTosection('skills')">Skills</a>
+                <a href="#Projects" id="link-project" onclick="scrollTosection('Projects')">Projects</a>
+                <a href="#contact" id="link-contact"  onclick="scrollTosection('contact')">Contact</a>
+
+            </nav>
+        </header>
+        <div class="slide-controls">
+            <button onclick="navigateSlides(-1)" > <- </button>
+            <button onclick="navigateSlides(1)" >-> </button>
+       
+        </div>
+
+        <div class="horizon-scroll">
+            
+         <section id = "hero">
+           <div class="hero-content">
+            <div class="hero-text">
+              <h2>Hi, I'M Uhone Prince</h2>
+              <p>Aspiring Backend Developer in Progress.<br>
+                      Currently studying Computer Science at Tshwane University of Technology.<br>
+                     I am in my third year of the program, passionate about building efficient, reliable systems and powering the brains behind user-friendly applications.</p>
+            </div>
+        <!-- <img src="Snapchat-1546625116.jpg" alt="myimage" class="hero-image"> -->
+           </div>
+           
+        </section>
+
+        <section id = "about">
+           <h2>About Me</h2>
+            <p>
+            I’m passionate about solving real-world problems through code and take pride in crafting efficient backend systems.<br>
+            I enjoy learning new technologies and refining my skills with each project I tackle.
+            </p>
+
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Java</li>
+                <li>SQL</li>
+                <!-- <li>HTML,CSS & JavaScript</li> -->
+                <!-- <li>Database Design</li> -->
+                
+            </ul>
+        </section>
+
+        <section id="Projects">
+            <h2>Projects</h2>
+<div class="project-container">
+    <!-- first project card -->
+  <div class ="project-card">
+            <h3>Password Generator GUI(basic)</h3>
+            <p>A smart Java-based tool that generates secure passwords using inputs like phone numebr, username, and custom creteria. Designed with object-oriented principles and a clean interface.</p>
+     <ul class="tech=tags">
+        <li>Java</li>
+        <li>OOP</li>
+        <li>User Validation</li>
+     </ul>
+     <a href="https://github.com/E-scert/PasswordGeneratorCode" target="_blank">Source Code</a>
+            </div>
+            <!-- second  -->
+  <div class="project-card">
+    <h3>Password Generator Web App</h3>
+    <p>A stylish browser-based version of my backend password tool. Includes strength meter, input options, and saved history. Built with HTML, CSS, and JavaScript.</p>
+  <ul class="tech-tags">
+    <li>HTML</li><li>CSS</li><li>JavaScript</li>
+  </ul>
+  <a href="https://E-scert.github.io/PasswordGenerator-WebApp/" target="_blank">Live Demo</a>
+  <a href="https://github.com/E-scert/PasswordGenerator-WebApp" target="_blank">Source Code</a>
+  </div>
+      <!-- third project  -->
+            <div class = "project-card">
+                <h3>Portfolio Website</h3>
+                <p>This very portfolio! Responsive design with scroll animations and backend integration plans.</p>
+      <ul class="tech-tags">
+        <li>HTML</li><li>CSS</li><li>Java Script</li>
+      </ul>
+      <a href="https://e-scert.github.io/Jr-portfolio/" target="_blank">Live Demo</a>
+            </div>
+            <!-- forth project -->
+             <div class="project-card">
+                <h3>Crypt-IT</h3>
+                <p>Web based Caesar cipher encryption and brute-force decryption too, built with HTML,CSS and JavaScript.  Inspired by my modular Java implementation</p>
+                <a href="https://e-scert.github.io/Crypt-It-Web/" target="_blank">Live Demo</a>
+                <a href="https://github.com/e-scert/Crypt-IT-Web" target="_blank">GitHub Repo</a>
+                <a href="https://github.com/E-scert/Crypt-It-Program" target="_blank">Java Version Source Code</a>
+             </div>
+</div>
+                      
+        </section>
+
+        <section id = "contact">
+            <h2>Contact</h2>
+            <p>Email:<a href="mailto:uhoneprincemulaudzi@jmail.com">uhoneprincemulaudzi@gmail.com</a></p>
+            <p>Github: <a href="https://github.com/E-scert" target="_blank">github.com/E-scert</a></p>
+            <p>Cell no:0717803663</p>
+        </section>
+
+        </div>
+        
+        <footer>
+            <p>&copy; JR 2025 - last updated: july 19,2025</p>
+            <p> <a href="https://github.com/E-scert" target="_blank">View My GitHub</a></p>
+        </footer>
+
+        <!-- script -->
+         <script>
+            const scrollContainer = document.querySelector('.horizon-scroll');
+            const sections = document.querySelector('.horizon-scroll');
+
+            function scrollTosection(id){
+                const targetIndex = [...sections].findIndex(sec => sec.id === id);
+                const offset = tagetIndex * window.innerWidth;
+                scrollContainer.style.transform = 'translateX(-${offset}px)';
+            }
+
+            //  const links = document.querySelectorAll('nav a');
+            // function scrollTosection(id){
+
+            //     const index = [ document.querySelectorAll('.horizon-scroll section')].findIndex(sec => sec.id === id);
+            //     document.queraSelector('.horizon-scroll').style.transform = 'translateX(-${index * window.innerWidth}px)';
+
+            //     links.forEach(link => link.classList.remove('active'));
+            // documeent.querySelector('#link-${id}').classList.add('active');
+            // }
+            <!-- Deployment refresh trigger -->
+
+         </script>
+
+        
+    </body>
