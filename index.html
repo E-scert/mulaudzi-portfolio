@@ -46,12 +46,6 @@
         >
       </nav>
     </header>
-
-    <!-- <div class="slide-controls">
-        <button onclick="navigateSlides(-1)"><-</button>
-        <button onclick="navigateSlides(1)">-></button>
-    </div> -->
-
     <main class="horizon-scroll">
       <section id="hero">
         <div class="hero-text">
@@ -96,6 +90,7 @@
       </ul>
     </section>
 
+    <!-- projects -->
     <section id="Projects">
       <h2>Projects</h2>
       <div class="project-container">
@@ -107,7 +102,7 @@
             like phone numebr, username, and custom creteria. Designed with
             object-oriented principles and a clean interface.
           </p>
-          <ul class="tech=tags">
+          <ul class="tech-tags">
             <li>Java</li>
             <li>OOP</li>
             <li>User Validation</li>
@@ -234,7 +229,7 @@
             without collecting any personal data. Features a built-in AI chat
             assistant for personalized guidance.
           </p>
-          <ul class="tech=tags">
+          <ul class="tech-tags">
             <li>React</li>
             <li>Node.js</li>
             <li>Postgresql</li>
@@ -254,14 +249,16 @@
             >live demo v3.0
           </a>
         </div>
-		  <!-- 7th project -->
+
+        <!-- 7th project -->
         <div class="project-card">
-          <h3>Campus Lnacer</h3>
+          <h3>Campus Lancer</h3>
           <p>
-            Campus-Lancer: Global freelance platform connecting students & industry with automated skill validation,
-			flexible engagement, and career-ready portfolios."
+            Campus-Lancer: Global freelance platform connecting students &
+            industry with automated skill validation, flexible engagement, and
+            career-ready portfolios."
           </p>
-          <ul class="tech=tags">
+          <ul class="tech-tags">
             <li>React</li>
             <li>Node.js</li>
             <li>Postgresql</li>
@@ -316,5 +313,13 @@
         >
       </p>
     </footer>
+    <script>
+      function scrollTosection(sectionId) {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    </script>
   </body>
 </html>
